@@ -1,4 +1,4 @@
-package com.ani.statusmachine.util;
+package com.ani.anole.util;
 
 /**
  * Created by zsl on 17-3-3.

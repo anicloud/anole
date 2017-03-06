@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ani.statusmachine</groupId>
-    <artifactId>statusmachine</artifactId>
+    <groupId>com.ani.anole</groupId>
+    <artifactId>anole</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -21,8 +21,8 @@
     </build>
     <dependencies>
         <dependency>
-            <groupId>com.ani.bus.device</groupId>
-            <artifactId>device-bus</artifactId>
+            <groupId>com.ani.octopus</groupId>
+            <artifactId>octopus-commons</artifactId>
             <version>1.0</version>
         </dependency>
     </dependencies>

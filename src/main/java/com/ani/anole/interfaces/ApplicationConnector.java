@@ -1,4 +1,4 @@
-package com.ani.statusmachine.interfaces;
+package com.ani.anole.interfaces;
 
 /**
  * Created by zsl on 17-3-3.
