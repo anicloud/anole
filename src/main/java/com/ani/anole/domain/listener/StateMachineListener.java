@@ -1,6 +1,8 @@
 package com.ani.anole.domain.listener;
 
-import com.ani.anole.domain.core.StateObject;
+import com.ani.anole.domain.statemachine.StateMachine;
+import com.ani.anole.domain.statemachine.StateMachineEvents;
+import com.ani.anole.domain.statemachine.StateObject;
 
 import java.util.List;
 
@@ -9,7 +11,11 @@ import java.util.List;
  */
 public interface StateMachineListener {
 
-    public StateObject getStateObjectByObjectid(String Objectid);
+    /**
+     *Object State transfer from StubA to StubB
+     * @param event
+     * @param stateObject
+     */
+    public void stateTransfer(StateMachineEvents event, StateObject stateObject);
 
-    public List<StateObject> getAllStateObject();
 }
