@@ -1,6 +1,9 @@
 package com.ani.anole.domain.statemachine;
 
+import com.ani.anole.domain.listener.StateMachineListener;
+
 import java.util.Set;
+import java.util.Vector;
 
 /**
  * Created by zsl on 17-3-6.
@@ -13,11 +16,13 @@ public class StateMachine {
 
     public Set<StateMachineNode> stateMachineNodes;
 
+
     public StateMachineNode currentStateNode;
     public StateMachine(Integer machineId,Set<StateMachineNode>stateMachineNodes,StateMachineNode stateMachineNode){
         this.machineId =machineId;
         this.stateMachineNodes = stateMachineNodes;
         this.currentStateNode = stateMachineNode;
     }
+
 
 }

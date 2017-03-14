@@ -15,10 +15,12 @@ public class StateMachineObjectManager {
 
     public void addStateObject(StateObject stateObject) {
         stateObjectMap.put(stateObject.stateObjectId, stateObject);
+        stateObject.notifyListeners();//todo
     }
 
     public void delStateObject(String stateObjectId) {
         stateObjectMap.remove(stateObjectId);
+        stateObjectMap.get(stateObjectId).notifyListeners();
     }
 
     public StateObject findStateObject(String stateObjectId) {
