@@ -22,6 +22,6 @@ public class StateMachineNode {
 
     public static boolean checkValuesType(State state,List propValues) throws AniRuleException {
         //todo
-    return false;
+     return false;
     }
 }

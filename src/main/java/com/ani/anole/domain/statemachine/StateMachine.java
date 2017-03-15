@@ -16,13 +16,12 @@ public class StateMachine {
 
     public Set<StateMachineNode> stateMachineNodes;
 
-
     public StateMachineNode currentStateNode;
+
     public StateMachine(Integer machineId,Set<StateMachineNode>stateMachineNodes,StateMachineNode stateMachineNode){
         this.machineId =machineId;
         this.stateMachineNodes = stateMachineNodes;
         this.currentStateNode = stateMachineNode;
     }
-
 
 }

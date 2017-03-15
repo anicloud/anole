@@ -12,10 +12,9 @@ import java.util.List;
 public interface StateMachineListener {
 
     /**
-     *Object State transfer from StubA to StubB
-     * @param event
+     * Object State transfer from StubA to StubB
      * @param stateObject
      */
-    public void stateTransfer(StateMachineEvents event, StateObject stateObject);
+    public void onStateObjectEvent(StateObject stateObject);
 
 }
