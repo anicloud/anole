@@ -9,15 +9,15 @@ import java.util.Set;
  */
 public class StateMachine {
 
-    public Integer machineId;
+    public Integer smId;
 
-    public Set<StateMachineNode> stateMachineNodes;
+    public Set<StateMachineNode> stateNodes;
 
     public StateMachineNode currentStateNode;
 
-    public StateMachine(Integer machineId, Set<StateMachineNode>stateMachineNodes, StateMachineNode stateMachineNode){
-        this.machineId = machineId;
-        this.stateMachineNodes = stateMachineNodes;
+    public StateMachine(Integer smId, Set<StateMachineNode> stateNodes, StateMachineNode stateMachineNode){
+        this.smId = smId;
+        this.stateNodes = stateNodes;
         this.currentStateNode = stateMachineNode;
     }
 

@@ -8,7 +8,9 @@ import com.ani.utils.core.datatype.AniDataType;
  * 参数的数据类型以及相关描述
  */
 public class StateProperty {
+
     public AniDataType dataType;
+
     public String name;
 
     public StateProperty(AniDataType dataType, String name) {

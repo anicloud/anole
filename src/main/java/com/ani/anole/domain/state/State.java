@@ -27,8 +27,20 @@ public class State {
 
     @Override
     public int hashCode() {
-        return Integer.valueOf(this.group.groupId.toString()
-                        + this.stateId.toString());
+        if(!isLegal()) return 0;
+        return this.group.groupId.intValue() + this.stateId;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        State cmpState = (State) obj;
+        if (!this.isLegal()
+                && cmpState != null
+                && cmpState.stateId != null)
+            return (this.stateId == cmpState.stateId)
+                    && (this.group.groupId == cmpState.group.groupId);
+        else
+            return false;
     }
 
     public boolean isLegal() {

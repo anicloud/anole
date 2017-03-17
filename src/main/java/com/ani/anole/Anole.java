@@ -11,25 +11,25 @@ import java.util.Map;
  */
 public class Anole {
 
-    private Map<String, StateObject> stateObjects;
+    private Map<String, StateObject> statesObject;
 
     private StateObjectManager stateObjectManager;
 
     public Anole() {
     }
 
-    public Anole(Map<String, StateObject> stateObjects) {
-        this.stateObjects = stateObjects;
+    public Anole(Map<String, StateObject> statesObject) {
+        this.statesObject = statesObject;
         initStateObjectManager();
     }
 
     public Anole(int expStateObjectContainerSize) {
-        this.stateObjects = new HashMap<>(expStateObjectContainerSize, 0.9f);
+        this.statesObject = new HashMap<>(expStateObjectContainerSize, 0.9f);
         initStateObjectManager();
     }
 
     private void initStateObjectManager() {
-        this.stateObjectManager = new StateObjectManager(this.stateObjects);
+        this.stateObjectManager = new StateObjectManager(this.statesObject);
     }
 
     public void getStateObject(String objectId) {

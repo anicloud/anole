@@ -2,7 +2,6 @@ package com.ani.anole.domain.statemachine;
 
 import com.ani.anole.domain.state.State;
 import com.ani.utils.exception.AniRuleException;
-import com.sun.xml.internal.ws.policy.spi.PolicyAssertionValidator;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,13 +13,13 @@ public class StateMachineNode {
 
     public State state;
 
-    public List propValues;
+    public List propsValue;
 
     public Collection<StateTransferTrigger> stateTransferTriggers;
 
-    public StateMachineNode(State state, List propValues, Collection<StateTransferTrigger> stateTransferTriggers) {
+    public StateMachineNode(State state, List propsValue, Collection<StateTransferTrigger> stateTransferTriggers) {
         this.state = state;
-        this.propValues = propValues;
+        this.propsValue = propsValue;
         this.stateTransferTriggers = stateTransferTriggers;
     }
 
@@ -38,9 +37,8 @@ public class StateMachineNode {
     public boolean equals(Object obj) {
         StateMachineNode cmpNode = (StateMachineNode) obj;
         if (!this.state.isLegal()
-                || cmpNode == null
-                || cmpNode.state.isLegal())
-            return true;
+                && cmpNode != null)
+            return this.state.equals(cmpNode.state);
         else
             return false;
     }
