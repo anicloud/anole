@@ -1,6 +1,6 @@
-package com.ani.cel.anole.repository;
+package com.ani.anole.repository;
 
-import com.ani.cel.anole.domain.statemachine.StateObject;
+import com.ani.anole.domain.statemachine.StateObject;
 
 /**
  * Created by zsl on 17-3-15.

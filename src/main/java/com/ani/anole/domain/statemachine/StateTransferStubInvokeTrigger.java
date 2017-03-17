@@ -1,4 +1,5 @@
-package com.ani.cel.anole.domain.statemachine;
+package com.ani.anole.domain.statemachine;
+
 
 import com.ani.octopus.commons.stub.dto.StubDto;
 

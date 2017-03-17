@@ -1,4 +1,4 @@
-package com.ani.cel.anole.domain.statemachine;
+package com.ani.anole.domain.statemachine;
 
 import java.util.Set;
 

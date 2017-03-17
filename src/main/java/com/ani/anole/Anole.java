@@ -1,7 +1,7 @@
-package com.ani.cel.anole;
+package com.ani.anole;
 
-import com.ani.cel.anole.domain.statemachine.StateObject;
-import com.ani.cel.anole.service.StateObjectManager;
+import com.ani.anole.service.StateObjectManager;
+import com.ani.anole.domain.statemachine.StateObject;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.ani.cel.anole.domain.statemachine;
+package com.ani.anole.domain.statemachine;
 
 import java.util.Map;
 
@@ -11,12 +11,12 @@ public class StateObject {
 
     public Map<Integer, StateMachine> stateMachineIdMap;
 
-    public Long timestmp;
+    public Long timestamp;
 
     public StateObject(String stateObjectId, Map<Integer, StateMachine> stateMachineIdMap, Long timetmp) {
         this.stateObjectId = stateObjectId;
         this.stateMachineIdMap = stateMachineIdMap;
-        this.timetmp = timetmp;
+        this.timestamp = timestamp;
     }
 
     public StateMachine getStateMachine(Integer machineId) {

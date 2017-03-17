@@ -1,7 +1,7 @@
-package com.ani.cel.anole.domain.state;
+package com.ani.anole.domain.state;
 
 
-import com.ani.octopus.commons.stub.type.AniDataType;
+import com.ani.utils.core.datatype.AniDataType;
 
 /**
  * Created by zsl on 17-3-6.

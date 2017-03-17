@@ -4,9 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ani.cel.anole</groupId>
+    <groupId>com.ani.anole</groupId>
     <artifactId>anole</artifactId>
     <version>1.0</version>
+
+    <name>anole</name>
+    <description>Anicel state machine project</description>
+
     <build>
         <plugins>
             <plugin>
@@ -20,6 +24,11 @@
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>com.ani.utils</groupId>
+            <artifactId>ani-utils</artifactId>
+            <version>1.0</version>
+        </dependency>
         <dependency>
             <groupId>com.ani.octopus</groupId>
             <artifactId>octopus-commons</artifactId>
