@@ -1,4 +1,4 @@
-package com.ani.anole.util;
+package com.ani.cel.anole.util;
 
 /**
  * Created by zsl on 17-3-3.

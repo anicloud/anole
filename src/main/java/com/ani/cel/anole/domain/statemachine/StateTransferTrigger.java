@@ -1,7 +1,4 @@
-package com.ani.anole.domain.statemachine;
-
-import com.ani.anole.domain.statemachine.StateMachineNode;
-import com.ani.octopus.commons.stub.dto.StubDto;
+package com.ani.cel.anole.domain.statemachine;
 
 /**
  * Created by zsl on 17-3-6.
@@ -18,4 +15,5 @@ public abstract class StateTransferTrigger {
     }
 
     public abstract StateMachineEvents checkStateTransfer();
+
 }

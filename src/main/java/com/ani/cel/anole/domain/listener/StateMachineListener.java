@@ -1,10 +1,6 @@
-package com.ani.anole.domain.listener;
+package com.ani.cel.anole.domain.listener;
 
-import com.ani.anole.domain.statemachine.StateMachine;
-import com.ani.anole.domain.statemachine.StateMachineEvents;
-import com.ani.anole.domain.statemachine.StateObject;
-
-import java.util.List;
+import com.ani.cel.anole.domain.statemachine.StateObject;
 
 /**
  * Created by zsl on 17-3-6.

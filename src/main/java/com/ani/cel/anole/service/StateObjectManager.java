@@ -1,8 +1,8 @@
-package com.ani.anole.service;
+package com.ani.cel.anole.service;
 
-import com.ani.anole.domain.listener.StateMachineListener;
-import com.ani.anole.domain.statemachine.StateObject;
-import com.ani.anole.repository.ObjectStateRepository;
+import com.ani.cel.anole.domain.listener.StateMachineListener;
+import com.ani.cel.anole.domain.statemachine.StateObject;
+import com.ani.cel.anole.repository.ObjectStateRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
@@ -14,10 +14,11 @@ import java.util.Map;
 @Component
 public class StateObjectManager {
 
+    private static Long TIME_TRIGGER = 100000l;
+
     private StateMachineListener stateMachineListener;
 
     private ObjectStateRepository objectStateRepository;
-    private static Long TIME_TRIGGER = 100000l;
 
     public Map<String, StateObject> stateObjects;
 
@@ -46,7 +47,7 @@ public class StateObjectManager {
         Long time = System.currentTimeMillis();
         for (String objectId : stateObjects.keySet()
                 ) {
-            if (stateObjects.get(objectId).timetmp - time > TIME_TRIGGER) updateStateObject(objectId);
+            if (stateObjects.get(objectId).timestmp - time > TIME_TRIGGER) updateStateObject(objectId);
         }
     }
 

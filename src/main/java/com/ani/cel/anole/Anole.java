@@ -1,7 +1,7 @@
-package com.ani.anole;
+package com.ani.cel.anole;
 
-import com.ani.anole.domain.statemachine.StateObject;
-import com.ani.anole.service.StateObjectManager;
+import com.ani.cel.anole.domain.statemachine.StateObject;
+import com.ani.cel.anole.service.StateObjectManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,8 +14,6 @@ public class Anole {
     private Map<String, StateObject> stateObjects;
 
     private StateObjectManager stateObjectManager;
-
-
 
     public Anole() {
     }
@@ -33,13 +31,16 @@ public class Anole {
     private void initStateObjectManager() {
         this.stateObjectManager = new StateObjectManager(this.stateObjects);
     }
-    public void getStateObject(String objectId){
+
+    public void getStateObject(String objectId) {
         this.stateObjectManager.findStateObject(objectId);
     }
-    public void delSateObject(String objectId){
+
+    public void delSateObject(String objectId) {
         this.stateObjectManager.delStateObject(objectId);
     }
-    public void putStateObject(StateObject stateObject){
+
+    public void putStateObject(StateObject stateObject) {
         this.stateObjectManager.putStateObject(stateObject);
     }
 

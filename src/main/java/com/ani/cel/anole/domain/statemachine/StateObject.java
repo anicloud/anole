@@ -1,9 +1,6 @@
-package com.ani.anole.domain.statemachine;
-
-import com.ani.anole.domain.listener.StateMachineListener;
+package com.ani.cel.anole.domain.statemachine;
 
 import java.util.Map;
-import java.util.Vector;
 
 /**
  * Created by zsl on 17-3-6.
@@ -14,7 +11,7 @@ public class StateObject {
 
     public Map<Integer, StateMachine> stateMachineIdMap;
 
-    public Long timetmp;
+    public Long timestmp;
 
     public StateMachine getStateMachine(Integer machineId) {
         return stateMachineIdMap.get(machineId);

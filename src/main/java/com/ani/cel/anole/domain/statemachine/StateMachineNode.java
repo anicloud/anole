@@ -1,6 +1,6 @@
-package com.ani.anole.domain.statemachine;
+package com.ani.cel.anole.domain.statemachine;
 
-import com.ani.anole.domain.state.State;
+import com.ani.cel.anole.domain.state.State;
 import com.ani.utils.exception.AniRuleException;
 
 import java.util.Collection;

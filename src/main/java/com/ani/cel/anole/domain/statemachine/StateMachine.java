@@ -1,9 +1,6 @@
-package com.ani.anole.domain.statemachine;
-
-import com.ani.anole.domain.listener.StateMachineListener;
+package com.ani.cel.anole.domain.statemachine;
 
 import java.util.Set;
-import java.util.Vector;
 
 /**
  * Created by zsl on 17-3-6.
