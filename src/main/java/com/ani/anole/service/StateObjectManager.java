@@ -17,12 +17,19 @@ public class StateObjectManager {
     private StateMachineListener stateMachineListener;
 
     private ObjectStateRepository objectStateRepository;
+
     private static Long TIME_TRIGGER = 100000l;
 
     public Map<String, StateObject> stateObjects;
 
     public StateObjectManager() {
         this.stateObjects = new HashMap<>(100, 0.9f);
+    }
+
+    public StateObjectManager(StateMachineListener stateMachineListener, ObjectStateRepository objectStateRepository, Map<String, StateObject> map) {
+        this.stateMachineListener = stateMachineListener;
+        this.objectStateRepository = objectStateRepository;
+        this.stateObjects = map;
     }
 
     public StateObjectManager(Map<String, StateObject> stateObjects) {

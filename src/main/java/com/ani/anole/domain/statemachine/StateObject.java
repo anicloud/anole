@@ -16,6 +16,12 @@ public class StateObject {
 
     public Long timetmp;
 
+    public StateObject(String stateObjectId, Map<Integer, StateMachine> stateMachineIdMap, Long timetmp) {
+        this.stateObjectId = stateObjectId;
+        this.stateMachineIdMap = stateMachineIdMap;
+        this.timetmp = timetmp;
+    }
+
     public StateMachine getStateMachine(Integer machineId) {
         return stateMachineIdMap.get(machineId);
     }
