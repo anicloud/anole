@@ -7,6 +7,7 @@
     <groupId>com.ani.anole</groupId>
     <artifactId>anole</artifactId>
     <version>1.0</version>
+    <packaging>jar</packaging>
 
     <name>anole</name>
     <description>Anicel state machine project</description>

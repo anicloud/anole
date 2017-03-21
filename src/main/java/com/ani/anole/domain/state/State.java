@@ -1,5 +1,6 @@
 package com.ani.anole.domain.state;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -7,7 +8,9 @@ import java.util.List;
  * stateGroup的值只和Object的类型相关
  * values数值的类型由quotas确定
  */
-public class State {
+public class State implements Serializable {
+
+    private static final long serialVersionUID = 1941995874906991261L;
 
     public StateGroup group;
 
@@ -17,6 +20,10 @@ public class State {
 
     public List<StateProperty> properties;
 
+    public State() {
+
+    }
+
     public State(StateGroup group, Integer stateId, String description, List<StateProperty> properties) {
         this.group = group;
         this.stateId = stateId;
@@ -25,9 +32,10 @@ public class State {
 
     }
 
+
     @Override
     public int hashCode() {
-        if(!isLegal()) return 0;
+        if (!isLegal()) return 0;
         return this.group.groupId.intValue() + this.stateId;
     }
 
@@ -45,9 +53,9 @@ public class State {
 
     public boolean isLegal() {
         if (this == null
-                        || this.stateId == null
-                        || this.group == null
-                        || this.group.groupId == null)
+                || this.stateId == null
+                || this.group == null
+                || this.group.groupId == null)
             return false;
         else
             return true;
