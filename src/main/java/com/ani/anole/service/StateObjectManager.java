@@ -13,7 +13,6 @@ import java.util.Set;
 /**
  * Created by zsl on 17-3-7.
  */
-@Component
 public class StateObjectManager {
 
     private static Long TIME_TRIGGER = 100000l;
@@ -30,6 +29,12 @@ public class StateObjectManager {
 
     public StateObjectManager(Map<String, StateObject> stateObjects) {
         this.stateObjects = stateObjects;
+    }
+
+    public StateObjectManager(Map<String, StateObject> stateObjects, StateMachineListener stateMachineListener, ObjectStateRepository objectStateRepository) {
+        this.stateObjects = stateObjects;
+        this.stateMachineListener = stateMachineListener;
+        this.objectStateRepository = objectStateRepository;
     }
 
     public void putStateObject(StateObject stateObject) {
