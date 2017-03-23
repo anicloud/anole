@@ -1,5 +1,7 @@
 package com.ani.anole.domain.state;
 
+import com.ani.octopus.commons.state.dto.StateDto;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -59,5 +61,9 @@ public class State implements Serializable {
             return false;
         else
             return true;
+    }
+
+    public StateDto toDto(){
+        return new StateDto(this.group.groupId,this.stateId);
     }
 }

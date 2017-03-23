@@ -1,6 +1,7 @@
 package com.ani.anole.domain.statemachine;
 
 import com.ani.anole.domain.state.State;
+import com.ani.octopus.commons.state.dto.StateNodeDto;
 import com.ani.utils.exception.AniRuleException;
 
 import java.util.Collection;
@@ -41,5 +42,8 @@ public class StateMachineNode {
             return this.state.equals(cmpNode.state);
         else
             return false;
+    }
+    public StateNodeDto toDto(){
+        return new StateNodeDto(this.state.toDto(),propsValue);
     }
 }

@@ -24,5 +24,4 @@ public class StateGroup implements Serializable {
         this.tags = tags;
     }
 
-
 }
