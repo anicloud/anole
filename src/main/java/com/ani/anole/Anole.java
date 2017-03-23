@@ -18,8 +18,8 @@ public class Anole {
     public Anole() {
     }
 
-    public Anole(Map<String, StateObject> statesObject) {
-        this.statesObject = statesObject;
+    public Anole(Map<String, StateObject> statesObjects) {
+        this.statesObject = statesObjects;
         initStateObjectManager();
     }
 
@@ -32,8 +32,8 @@ public class Anole {
         this.stateObjectManager = new StateObjectManager(this.statesObject);
     }
 
-    public void getStateObject(String objectId) {
-        this.stateObjectManager.findStateObject(objectId);
+    public StateObject getStateObject(String objectId) {
+        return this.stateObjectManager.findStateObject(objectId);
     }
 
     public void delSateObject(String objectId) {

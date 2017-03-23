@@ -20,5 +20,4 @@ public class StateMachine {
         this.stateNodes = stateNodes;
         this.currentStateNode = stateMachineNode;
     }
-
 }

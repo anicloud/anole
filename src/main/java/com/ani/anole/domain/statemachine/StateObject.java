@@ -16,7 +16,7 @@ public class StateObject {
     public StateObject(String stateObjectId, Map<Integer, StateMachine> stateMachineIdMap, Long timetmp) {
         this.stateObjectId = stateObjectId;
         this.stateMachineIdMap = stateMachineIdMap;
-        this.timestamp = timestamp;
+        this.timestamp = timetmp;
     }
 
     public StateMachine getStateMachine(Integer machineId) {
