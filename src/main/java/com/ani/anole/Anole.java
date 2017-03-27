@@ -6,6 +6,7 @@ import com.ani.anole.service.StateObjectManager;
 import com.ani.anole.domain.statemachine.StateObject;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +18,7 @@ public class Anole {
 
     private Map<String, StateObject> statesObject;
 
+    @Resource
     private StateObjectManager stateObjectManager;
 
     private StateMachineListener stateMachineListener;
