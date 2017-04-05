@@ -25,14 +25,6 @@ public class Anole {
 
     private ObjectStateRepository objectStateRepository;
 
-    public Anole() {
-    }
-
-    public Anole(Map<String, StateObject> statesObjects) {
-        this.statesObject = statesObjects;
-        initStateObjectManager();
-    }
-
     public Anole(int expStateObjectContainerSize) {
         this.statesObject = new HashMap<>(expStateObjectContainerSize, 0.9f);
         initStateObjectManager();

@@ -43,12 +43,13 @@ public class TestAnole {
 
         Map<String, StateObject> stateObjectMap = new HashMap<>();
         stateObjectMap.put(stateObjectId, stateObject);
-        anole = new Anole(stateObjectMap);
+//        anole = new Anole(stateObjectMap);
     }
+
     @Test
-    public void test(){
+    public void test() {
         initAnole();
-       StateObject stateObject = anole.getStateObject("11:1");
+        StateObject stateObject = anole.getStateObject("11:1");
         System.out.print(stateObject.stateObjectId);
     }
 }
