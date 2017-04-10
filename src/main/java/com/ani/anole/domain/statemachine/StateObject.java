@@ -13,8 +13,6 @@ public class StateObject {
 
     public Long timestamp;
 
-    public final Object lock = new Object();
-
     public StateObject(String stateObjectId, Map<Integer, StateMachine> stateMachineIdMap, Long timetmp) {
         this.stateObjectId = stateObjectId;
         this.stateMachineIdMap = stateMachineIdMap;

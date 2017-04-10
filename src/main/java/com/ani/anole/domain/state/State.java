@@ -26,6 +26,11 @@ public class State implements Serializable {
 
     }
 
+    public State(Long stateGroupId, Integer stateId) {
+        this.group = new StateGroup(stateGroupId);
+        this.stateId = stateId;
+    }
+
     public State(StateGroup group, Integer stateId, String description, List<StateProperty> properties) {
         this.group = group;
         this.stateId = stateId;
@@ -63,7 +68,7 @@ public class State implements Serializable {
             return true;
     }
 
-    public StateDto toDto(){
-        return new StateDto(this.group.groupId,this.stateId);
+    public StateDto toDto() {
+        return new StateDto(this.group.groupId, this.stateId);
     }
 }

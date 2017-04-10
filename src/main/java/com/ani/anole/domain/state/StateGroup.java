@@ -18,6 +18,10 @@ public class StateGroup implements Serializable {
 
     }
 
+    public StateGroup(Long groupId) {
+        this.groupId = groupId;
+    }
+
     public StateGroup(Long groupId, String name, Set<String> tags) {
         this.groupId = groupId;
         this.name = name;
