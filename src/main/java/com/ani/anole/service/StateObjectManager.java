@@ -39,10 +39,10 @@ public class StateObjectManager {
 
     public void putStateObject(StateObject stateObject) {
         if (stateObject == null) return;
-        if (stateObjects.keySet().contains(stateObject.stateObjectId)) {
-            boolean isChanged = checkIsStateChanged(stateObject, stateObjects.get(stateObject.stateObjectId));
-            if (isChanged) listenStateObject(stateObject);
-        }
+//        if (stateObjects.keySet().contains(stateObject.stateObjectId)) {
+//            boolean isChanged = checkIsStateChanged(stateObject, stateObjects.get(stateObject.stateObjectId));
+//            if (isChanged) listenStateObject(stateObject);
+//        }
         stateObjects.put(stateObject.stateObjectId, stateObject);
 
     }
@@ -54,33 +54,33 @@ public class StateObjectManager {
     public StateObject findStateObject(String stateObjectId) {
         return stateObjects.get(stateObjectId);
     }
+//
+//    private void triggerUpdateObject() {
+//        Long time = System.currentTimeMillis();
+//        for (String objectId : stateObjects.keySet()
+//                ) {
+//            if (stateObjects.get(objectId).timestamp - time > TIME_TRIGGER) updateStateObject(objectId);
+//        }
+//    }
 
-    private void triggerUpdateObject() {
-        Long time = System.currentTimeMillis();
-        for (String objectId : stateObjects.keySet()
-                ) {
-            if (stateObjects.get(objectId).timestamp - time > TIME_TRIGGER) updateStateObject(objectId);
-        }
-    }
+//    private void updateStateObject(String objectId) {
+//        if (objectStateRepository != null) {
+//            this.putStateObject(objectStateRepository.getObjectState(objectId));
+//
+//        }
+//    }
+//
+//    private void listenStateObject(StateObject stateObject) {
+//        stateMachineListener.onStateObjectEvent(stateObject);
+//    }
 
-    private void updateStateObject(String objectId) {
-        if (objectStateRepository != null) {
-            this.putStateObject(objectStateRepository.getObjectState(objectId));
-
-        }
-    }
-
-    private void listenStateObject(StateObject stateObject) {
-        stateMachineListener.onStateObjectEvent(stateObject);
-    }
-
-    private boolean checkIsStateChanged(StateObject stateObject1, StateObject stateObject2) {
-        if (stateObject1.stateMachineIdMap.size() != stateObject2.stateMachineIdMap.size()) return true;
-        for (Integer objectId : stateObject1.stateMachineIdMap.keySet()) {
-            StateMachine stateMachine = stateObject1.getStateMachine(objectId);
-            StateMachine stateMachine1 = stateObject2.getStateMachine(objectId);
-            if (!stateMachine.currentStateNode.equals(stateMachine1.currentStateNode)) return true;
-        }
-        return false;
-    }
+//    private boolean checkIsStateChanged(StateObject stateObject1, StateObject stateObject2) {
+//        if (stateObject1.stateMachineIdMap.size() != stateObject2.stateMachineIdMap.size()) return true;
+//        for (Integer objectId : stateObject1.stateMachineIdMap.keySet()) {
+//            StateMachine stateMachine = stateObject1.getStateMachine(objectId);
+//            StateMachine stateMachine1 = stateObject2.getStateMachine(objectId);
+//            if (!stateMachine.currentStateNode.equals(stateMachine1.currentStateNode)) return true;
+//        }
+//        return false;
+//    }
 }
