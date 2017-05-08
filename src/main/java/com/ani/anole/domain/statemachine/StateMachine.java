@@ -3,7 +3,9 @@ package com.ani.anole.domain.statemachine;
 import com.ani.octopus.commons.state.dto.StateMachineDto;
 import com.ani.octopus.commons.state.dto.StateNodeDto;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -15,27 +17,26 @@ public class StateMachine {
 
     public Integer smId;
 
-    public Set<StateMachineNode> stateNodes;
+    public List<StateMachineNode> stateNodes;
 
     public StateMachineNode currentStateNode;
 
-    public StateMachine(Integer smId, Set<StateMachineNode> stateNodes, StateMachineNode stateMachineNode){
+    public StateMachine(Integer smId, List<StateMachineNode> stateNodes, StateMachineNode stateMachineNode) {
         this.smId = smId;
         this.stateNodes = stateNodes;
         this.currentStateNode = stateMachineNode;
     }
 
-    public StateMachineDto toDto(){
+    public StateMachineDto toDto() {
         return new StateMachineDto(
                 this.smId,
-                stateNodesToDto(),
-                currentStateNode.toDto()
+                stateNodesToDto()
         );
     }
 
-    private Set<StateNodeDto> stateNodesToDto(){
-        if(stateNodes!=null) {
-            Set<StateNodeDto> stateNodeDtoSet  = new HashSet<>();
+    private List<StateNodeDto> stateNodesToDto() {
+        if (stateNodes != null) {
+            List<StateNodeDto> stateNodeDtoSet = new ArrayList<>();
             for (StateMachineNode stateNode : stateNodes) {
                 stateNodeDtoSet.add(stateNode.toDto());
             }
