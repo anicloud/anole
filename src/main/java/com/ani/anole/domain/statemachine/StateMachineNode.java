@@ -24,6 +24,10 @@ public class StateMachineNode {
         this.stateTransferTriggers = stateTransferTriggers;
     }
 
+    public StateMachineNode(State state) {
+        this.state = state;
+    }
+
     public static boolean checkValuesType(State state, List propValues) throws AniRuleException {
         //todo
         return false;
@@ -43,7 +47,8 @@ public class StateMachineNode {
         else
             return false;
     }
-    public StateNodeDto toDto(){
-        return new StateNodeDto(this.state.toDto(),propsValue);
+
+    public StateNodeDto toDto() {
+        return new StateNodeDto(this.state.toDto(), propsValue);
     }
 }

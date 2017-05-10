@@ -44,10 +44,13 @@ public class Anole {
         this.stateObjectManager = new StateObjectManager(this.statesObject, this.stateMachineListener, this.objectStateRepository);
     }
 
+    public StateObject getStateObject(Long masterId ,Integer slaveId) {
+        String objectId = masterId+":"+slaveId;
+        return this.stateObjectManager.findStateObject(objectId);
+    }
     public StateObject getStateObject(String objectId) {
         return this.stateObjectManager.findStateObject(objectId);
     }
-
     public void delSateObject(String objectId) {
         this.stateObjectManager.delStateObject(objectId);
     }
