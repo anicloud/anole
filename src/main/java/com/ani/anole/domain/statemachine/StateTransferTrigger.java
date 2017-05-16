@@ -1,9 +1,11 @@
 package com.ani.anole.domain.statemachine;
 
+import java.io.Serializable;
+
 /**
  * Created by zsl on 17-3-6.
  */
-public abstract class StateTransferTrigger {
+public abstract class StateTransferTrigger implements Serializable {
 
     public StateMachineNode nextStateMachineNode;
 

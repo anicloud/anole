@@ -3,6 +3,7 @@ package com.ani.anole.domain.statemachine;
 import com.ani.octopus.commons.state.dto.StateMachineDto;
 import com.ani.octopus.commons.state.dto.StateNodeDto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.Set;
  * stateNodes为状态图的数据结构
  * quotas为各个状态节点所在的各个参数类型
  */
-public class StateMachine {
+public class StateMachine  implements Serializable {
 
     public Integer smId;
 

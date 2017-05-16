@@ -1,11 +1,12 @@
 package com.ani.anole.domain.statemachine;
 
+import java.io.Serializable;
 import java.util.Map;
 
 /**
  * Created by zsl on 17-3-6.
  */
-public class StateObject {
+public class StateObject  implements Serializable {
 
     public String stateObjectId;
 

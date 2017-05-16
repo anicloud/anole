@@ -28,7 +28,7 @@ public class TestAnole {
 
         StateMachineNode stateMachineNode = new StateMachineNode(state, null, null);
         StateMachineNode currentnode = new StateMachineNode(state1, null, null);
-        Set<StateMachineNode> stateMachineNodes = new HashSet<>();
+        List<StateMachineNode> stateMachineNodes = new ArrayList<>();
         stateMachineNodes.add(stateMachineNode);
         stateMachineNodes.add(currentnode);
 
@@ -49,7 +49,7 @@ public class TestAnole {
     @Test
     public void test() {
         initAnole();
-        StateObject stateObject = anole.getStateObject("11:1");
-        System.out.print(stateObject.stateObjectId);
+//        StateObject stateObject = anole.getStateObject("11:1");
+//        System.out.print(stateObject.stateObjectId);
     }
 }

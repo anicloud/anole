@@ -4,13 +4,14 @@ import com.ani.anole.domain.state.State;
 import com.ani.octopus.commons.state.dto.StateNodeDto;
 import com.ani.utils.exception.AniRuleException;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
 /**
  * Created by zsl on 17-3-6.
  */
-public class StateMachineNode {
+public class StateMachineNode  implements Serializable {
 
     public State state;
 

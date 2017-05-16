@@ -21,36 +21,37 @@ public class Anole {
     @Resource
     private StateObjectManager stateObjectManager;
 
-    private StateMachineListener stateMachineListener;
 
     private ObjectStateRepository objectStateRepository;
 
-    public Anole(){
+    public Anole() {
 
     }
+
     public Anole(int expStateObjectContainerSize) {
         this.statesObject = new HashMap<>(expStateObjectContainerSize, 0.9f);
         initStateObjectManager();
     }
 
-    public Anole(Map statesObject, StateMachineListener stateMachineListener, ObjectStateRepository objectStateRepository) {
+    public Anole(Map statesObject, ObjectStateRepository objectStateRepository) {
         this.statesObject = statesObject;
-        this.stateMachineListener = stateMachineListener;
         this.objectStateRepository = objectStateRepository;
         initStateObjectManager();
     }
 
     private void initStateObjectManager() {
-        this.stateObjectManager = new StateObjectManager(this.statesObject, this.stateMachineListener, this.objectStateRepository);
+        this.stateObjectManager = new StateObjectManager(this.statesObject, this.objectStateRepository);
     }
 
-    public StateObject getStateObject(Long masterId ,Integer slaveId) {
-        String objectId = masterId+":"+slaveId;
+    public StateObject getStateObject(Long masterId, Integer slaveId) {
+        String objectId = masterId + ":" + slaveId;
         return this.stateObjectManager.findStateObject(objectId);
     }
+
     public StateObject getStateObject(String objectId) {
         return this.stateObjectManager.findStateObject(objectId);
     }
+
     public void delSateObject(String objectId) {
         this.stateObjectManager.delStateObject(objectId);
     }
