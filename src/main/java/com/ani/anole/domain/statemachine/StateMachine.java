@@ -1,5 +1,8 @@
 package com.ani.anole.domain.statemachine;
 
+import com.ani.anole.domain.state.State;
+import com.ani.octopus.commons.state.dto.StateArgumentDto;
+import com.ani.octopus.commons.state.dto.StateDto;
 import com.ani.octopus.commons.state.dto.StateMachineDto;
 import com.ani.octopus.commons.state.dto.StateNodeDto;
 
@@ -14,7 +17,7 @@ import java.util.Set;
  * stateNodes为状态图的数据结构
  * quotas为各个状态节点所在的各个参数类型
  */
-public class StateMachine  implements Serializable {
+public class StateMachine implements Serializable {
 
     public Integer smId;
 
@@ -31,8 +34,19 @@ public class StateMachine  implements Serializable {
     public StateMachineDto toDto() {
         return new StateMachineDto(
                 this.smId,
-                stateNodesToDto()
+                toStateDto(currentStateNode)
         );
+    }
+
+    private StateDto toStateDto(StateMachineNode stateNode) {
+        if (stateNode.state.properties == null)
+            return new StateDto(stateNode.state.group.groupId, stateNode.state.stateId);
+        List<StateArgumentDto> stateArgumentDtos = new ArrayList<>(stateNode.propsValue.size());
+        for (Object arg : stateNode.propsValue) {
+            StateArgumentDto stateArgumentDto = new StateArgumentDto(arg);
+            stateArgumentDtos.add(stateArgumentDto);
+        }
+        return new StateDto(stateNode.state.group.groupId, stateNode.state.stateId, stateArgumentDtos);
     }
 
     private List<StateNodeDto> stateNodesToDto() {

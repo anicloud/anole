@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by zsl on 17-3-6.
  */
-public class StateMachineNode  implements Serializable {
+public class StateMachineNode implements Serializable {
 
     public State state;
 
@@ -23,6 +23,11 @@ public class StateMachineNode  implements Serializable {
         this.state = state;
         this.propsValue = propsValue;
         this.stateTransferTriggers = stateTransferTriggers;
+    }
+
+    public StateMachineNode(State state, List propsValue) {
+        this.state = state;
+        this.propsValue = propsValue;
     }
 
     public StateMachineNode(State state) {
