@@ -19,7 +19,12 @@ public class StateProperty implements Serializable {
         this.dataType = dataType;
         this.name = name;
     }
-    public StateProperty(){
 
+    public StateProperty() {
+
+    }
+
+    public StateProperty(AniDataType aniDataType) {
+        this.dataType = aniDataType;
     }
 }
