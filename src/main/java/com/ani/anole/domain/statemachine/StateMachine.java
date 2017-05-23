@@ -39,7 +39,7 @@ public class StateMachine implements Serializable {
     }
 
     private StateDto toStateDto(StateMachineNode stateNode) {
-        if (stateNode.state.properties == null)
+        if (stateNode.propsValue == null)
             return new StateDto(stateNode.state.group.groupId, stateNode.state.stateId);
         List<StateArgumentDto> stateArgumentDtos = new ArrayList<>(stateNode.propsValue.size());
         for (Object arg : stateNode.propsValue) {
