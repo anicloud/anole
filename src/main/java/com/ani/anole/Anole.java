@@ -1,7 +1,6 @@
 package com.ani.anole;
 
-import com.ani.anole.domain.listener.StateMachineListener;
-import com.ani.anole.repository.ObjectStateRepository;
+import com.ani.anole.repository.StateObjectRepository;
 import com.ani.anole.service.StateObjectManager;
 import com.ani.anole.domain.statemachine.StateObject;
 import org.springframework.stereotype.Component;
@@ -22,7 +21,7 @@ public class Anole {
     private StateObjectManager stateObjectManager;
 
 
-    private ObjectStateRepository objectStateRepository;
+    private StateObjectRepository stateObjectRepository;
 
     public Anole() {
 
@@ -33,14 +32,14 @@ public class Anole {
         initStateObjectManager();
     }
 
-    public Anole(Map statesObject, ObjectStateRepository objectStateRepository) {
+    public Anole(Map statesObject, StateObjectRepository stateObjectRepository) {
         this.statesObject = statesObject;
-        this.objectStateRepository = objectStateRepository;
+        this.stateObjectRepository = stateObjectRepository;
         initStateObjectManager();
     }
 
     private void initStateObjectManager() {
-        this.stateObjectManager = new StateObjectManager(this.statesObject, this.objectStateRepository);
+        this.stateObjectManager = new StateObjectManager(this.statesObject, this.stateObjectRepository);
     }
 
     public StateObject getStateObject(Long masterId, Integer slaveId) {

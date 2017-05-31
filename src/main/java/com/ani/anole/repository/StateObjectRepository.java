@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
  * Created by zsl on 17-3-15.
  */
 @Service
-public interface ObjectStateRepository {
+public interface StateObjectRepository {
     /**
      * 存入redis 缓存
      *

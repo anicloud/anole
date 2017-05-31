@@ -12,14 +12,14 @@ import javax.annotation.Resource;
 /**
  * Created by zsl on 17-5-11.
  */
-@Component
-public class ObjectStateRepoRedis implements ObjectStateRepository {
+@Component("stateObjectRepository")
+public class StateRepoRedisObject implements StateObjectRepository {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ObjectStateRepoRedis.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(StateRepoRedisObject.class);
 
     private String STATE_OBJECT_KEY = "stateObject";
 
-    public ObjectStateRepoRedis() {
+    public StateRepoRedisObject() {
 
     }
 
