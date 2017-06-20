@@ -44,7 +44,8 @@ public class Anole {
 
     public StateObject getStateObject(Long masterId, Integer slaveId) {
         String objectId = masterId + ":" + slaveId;
-        return this.stateObjectManager.findStateObject(objectId);
+        StateObject stateObject = this.stateObjectManager.findStateObject(objectId);
+        return stateObject==null?new StateObject():stateObject;
     }
 
     public StateObject getStateObject(String objectId) {

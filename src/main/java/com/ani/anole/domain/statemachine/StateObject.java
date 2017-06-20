@@ -14,10 +14,14 @@ public class StateObject  implements Serializable {
 
     public Long timestamp;
 
+
     public StateObject(String stateObjectId, Map<Integer, StateMachine> stateMachineIdMap, Long timetmp) {
         this.stateObjectId = stateObjectId;
         this.stateMachineIdMap = stateMachineIdMap;
         this.timestamp = timetmp;
+    }
+
+    public StateObject() {
     }
 
     public StateMachine getStateMachine(Integer machineId) {
