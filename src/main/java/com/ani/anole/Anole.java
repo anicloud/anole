@@ -49,7 +49,8 @@ public class Anole {
     }
 
     public StateObject getStateObject(String objectId) {
-        return this.stateObjectManager.findStateObject(objectId);
+        StateObject stateObject = this.stateObjectManager.findStateObject(objectId);
+        return stateObject==null?new StateObject():stateObject;
     }
 
     public void delSateObject(String objectId) {
