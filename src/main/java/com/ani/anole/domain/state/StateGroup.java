@@ -8,6 +8,7 @@ import java.util.Set;
  */
 public class StateGroup implements Serializable {
 
+    private static final long serialVersionUID = 2729495707957440859L;
     public Long groupId;
 
     public String name;

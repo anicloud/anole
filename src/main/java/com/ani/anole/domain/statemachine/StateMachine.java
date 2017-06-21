@@ -19,6 +19,7 @@ import java.util.Set;
  */
 public class StateMachine implements Serializable {
 
+    private static final long serialVersionUID = 736138741466749796L;
     public Integer smId;
 
     public List<StateMachineNode> stateNodes;

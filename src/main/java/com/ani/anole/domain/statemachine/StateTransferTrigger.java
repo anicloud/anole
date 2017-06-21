@@ -7,6 +7,7 @@ import java.io.Serializable;
  */
 public abstract class StateTransferTrigger implements Serializable {
 
+    private static final long serialVersionUID = -7000316988403333222L;
     public StateMachineNode nextStateMachineNode;
 
     public StateTransferTrigger() {

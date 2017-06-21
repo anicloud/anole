@@ -6,8 +6,9 @@ import java.util.Map;
 /**
  * Created by zsl on 17-3-6.
  */
-public class StateObject  implements Serializable {
+public class StateObject implements Serializable {
 
+    private static final long serialVersionUID = -7370290673108712979L;
     public String stateObjectId;
 
     public Map<Integer, StateMachine> stateMachineIdMap;

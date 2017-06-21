@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class StateMachineNode implements Serializable {
 
+    private static final long serialVersionUID = -8140790425603538273L;
     public State state;
 
     public List propsValue;

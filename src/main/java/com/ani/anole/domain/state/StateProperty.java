@@ -11,6 +11,7 @@ import java.io.Serializable;
  */
 public class StateProperty implements Serializable {
 
+    private static final long serialVersionUID = 5620653945689746098L;
     public AniDataType dataType;
 
     public String name;
